@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pancit Canton</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
-    <div class="topBar">
-        <h1>Pancit Canton Co.</h1>
+    <div class="hero-section">
+
+        <div>
+            <h1>Pancit Canton Co.</h1>
+            <p>scroll down to know how to make it</p>
+        </div>
+
     </div>
 
     <div class="content">
-        <img src="yellow.png" alt="yellow pancit canton" id="pancitCanton">
-        <p>In this page you can learn <a href="https://drive.google.com/file/d/1fduMvsLIlyqpslT_moU2PHi70kNxK45M/view?usp=sharing" target="_blank">how to cook pancit canton.</a></p>
+        <div class="text" data-aos="fadeLeft" data-aos-delay="30" data-aos-duration="650">
+            <p>Watch this video to learn <br><a
+                    href="https://drive.google.com/file/d/1fduMvsLIlyqpslT_moU2PHi70kNxK45M/view?usp=sharing"
+                    target="_blank">how to cook pancit canton.</a></p>
+        </div>
 
+        <div class="image" data-aos="fadeRight" data-aos-delay="40" data-aos-duration="650">
+            <img src="yellow.png" alt="yellow pancit canton" id="pancitCanton">
+        </div>
     </div>
 
-    <div class="footer">
-        <footer>
-            <p>GROUP 4, Copyright &copy;2021</p>
-            <p>HI POH</p>
-        </footer>
+    <footer>
+        <p>GROUP 4, Copyright &copy;2021</p>
+    </footer>
 
-    </div>
 
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            mirror: true,
+        });
+    </script>
 </body>
+
 </html>

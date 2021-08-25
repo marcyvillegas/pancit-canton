@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+@mixin flex($screen) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $screen;
+}
+
+$primary-bgColor: #f2cb05;
+$secondary-bsColor: whitesmoke;
+$mainfont: "Poppins", sans-serif;
+$blackText: rgba(43, 41, 41, 0.973);
+$textShadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.hero-section {
+  @include flex(100vh);
+  background-color: $primary-bgColor;
+  font-weight: 700;
+
+  h1 {
+    font-family: $mainfont;
+    font-size: 8rem;
+    color: $blackText;
+    text-shadow: $textShadow;
+    animation: fadeUp ease 1s;
+  }
+
+  p {
+    text-align: center;
+    font-family: $mainfont;
+    font-size: 2rem;
+    color: $secondary-bsColor;
+    text-shadow: $textShadow;
+    margin-top: -1em;
+    animation: fadeUp ease 1.5s 10ms;
+  }
+}
+
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+.content {
+  @include flex(100vh);
+  background-color: $secondary-bsColor;
+  font-weight: 700;
+
+  .image{
+    margin-left: 3em;
+  }
+
+  .text {
+    font-family: $mainfont;
+    width: 80ch;
+    margin-left: 2em;
+
+    p {
+      color: $blackText;
+      font-size: 4.5rem;
+      line-height: 1em;
+    }
+
+    a {
+      color: $blackText;
+      font-size: 3rem;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: $blackText;
+    }
+  }
+}
+
+footer {
+  @include flex(5rem);
+  font-family: $mainfont;
+  color: $secondary-bsColor;
+  background-color: $blackText;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+[data-aos="fadeRight"]
+{
+    opacity: 0;
+    transform: translateX(20px);
+    transition-property: opacity, transform;
+}
+
+[data-aos="fadeLeft"]
+{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition-property: opacity, transform;
+}
+
+
+
+
+
